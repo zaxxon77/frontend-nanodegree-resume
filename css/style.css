@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #82B7EF;
   line-height: 48px;
   display: inline;
 }
@@ -23,7 +23,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: black;
   line-height: 29px;
   padding: 10px;
 }
@@ -83,11 +83,11 @@ a {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
-  line-height: 28px;
+  line-height: 22px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #82B7EF;
   display: none;
 }
 
@@ -97,6 +97,14 @@ a {
 
 .orange-text {
   color: #F5AE23;
+}
+
+.lt-blue {
+  background-color: #82B7EF;
+}
+
+.lt-blue-text {
+  color: #82B7EF;
 }
 
 .white-text {
@@ -126,8 +134,29 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+/*  -webkit-flex-direction: row;
+*/
 }
 
+.flex-item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+/*  -webkit-flex-direction: row;
+*/*/}
+
+/*.flex-item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+*/
 .center-content {
   padding-top: 2.5%;
   padding-left: 5%;
@@ -148,9 +177,15 @@ ul {
 
 img {
   padding: 10px;
+  width:50vw;
+}
+
+.img_project {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1.5);
 }
 
 /* Bar chart stuff */
+/* ZWS don't think I need this 
 .chart div {
   font: 10px sans-serif;
   background-color: #4A4A4A;
@@ -160,7 +195,7 @@ img {
   height: 12px;
   color: white;
   display: inline-block;
-}
+} */
 
 span {
   padding: 5px;
@@ -213,3 +248,13 @@ span {
     display: block;
   }
 }
+
+@media only screen and (min-width: 875px) {
+/* change header title to be under name,
+consider stacking skills and contacts */
+}
+
+
+
+
+
