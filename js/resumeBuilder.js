@@ -250,7 +250,24 @@ $("#mapDiv").append(googleMap);
 
 
 // D3.js sandbox
-//d3.select("body").transition()
-//    .style("background-color", "gray");
+/*d3.select("body").transition()
+    .style("background-color", "gray")
+    .duration(750);
+*/
+// Hamburger Menu Stuff
+$( ".cross" ).hide();
+$( ".menu" ).hide();
+$( ".hamburger" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
 
+$( ".cross" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
 

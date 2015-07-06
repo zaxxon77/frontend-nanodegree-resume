@@ -54,6 +54,25 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
+
+ <!-- Hamburger Menu design from:
+Hamburger Menu - HTML, CSS & jQuery
+By Glenn Smith, http://codepen.io/g13nn/pen/eHGEF
+--> 
+  <header-menu>
+    <button class="hamburger">&#9776;</button>
+    <button class="cross">&#735;</button>
+  </header-menu>
+  <div class="menu">
+    <ul>
+      <a href="#workExperienceAnchor"><li>Work Experience</li></a>
+      <a href="#projectsAnchor"><li>Web Dev Projects</li></a>
+      <a href="#educationAnchor"><li>Education</li></a>
+      <a href="#mapAnchor"><li>Where I've Lived, Worked, and Made the Grade</li></a>
+      <a href="#letsConnectAnchor"><li>Let's Connect</li></a>
+    </ul>
+  </div>
+
   <div id="main">
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -66,18 +85,23 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div style='clear: both;'></div>
     <div id="workExperience" class='gray'>
+      <a name="workExperienceAnchor"></a>
       <h2>Work Experience</h2>
     </div>
     <div id="projects">
-      <h2>Projects</h2>
+      <a name="projectsAnchor"></a>
+      <h2>Web Development Projects</h2>
     </div>
     <div id="education" class='gray'>
+      <a name="educationAnchor"></a>
       <h2>Education</h2>
     </div>
     <div id="mapDiv">
+      <a name="mapAnchor"></a>
       <h2>Where I've Lived, Worked, and Made the Grade</h2>
     </div>
     <div id="letsConnect" class='dark-gray'>
+      <a name="letsConnectAnchor"></a>
       <h2 class='lt-blue center-text'>Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
