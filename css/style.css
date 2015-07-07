@@ -57,54 +57,43 @@ header {
   text-align: center;
 }
 
-.menu,
-ul {
+.menu ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   list-style-image: none;
 }
 
-.menu,
-li {
+.menu li {
   display: block;
   padding: 15px 0 15px 0;
   border-bottom: #1d1f20 1px solid;
 }
 
-.menu,
-li:hover {
+.menu li:hover {
   display: block;
   background: #181818;
   padding: 15px 0 15px 0;
   border-bottom: #1d1f20 1px solid;
 }
 
-.menu,
-ul,
-li,
-a {
+.menu ul li a {
   text-decoration: none;
   margin: 0px;
   color: #fff;
 }
 
-.menu,
-ul,
-li,
-a:hover {
+.menu ul li a:hover {
   color: #fff;
   text-decoration: none;
 }
 
-.menu,
-a {
+.menu a {
   text-decoration: none;
   color: white;
 }
 
-.menu,
-a:hover {
+.menu a:hover {
   text-decoration: none;
   color: white;
 }
@@ -126,9 +115,7 @@ a:hover {
   overflow: auto;
 }
 
-.education-entry, 
-.work-entry, 
-.project-entry {
+.education-entry,  .work-entry,  .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
