@@ -11,7 +11,7 @@ var bio = {
 	},
 	"welcomeMessage" : "Thirteen years of Mechanical, Aeronautical, Aerospace, and Systems Engineering experience with a strong background spanning leadership and program planning, missile system navigation, guidance, and control (NG&C) design and analysis, flight software development, physics-based model and simulation development, real time hardware-in-the-loop testing (HWIL), and system/subsystem/product requirements development, verification, and validation. Experience with total product lifecycle from design to deployment. Consistent top performer, and Subject Matter Expert in boost-phase missile stability. Recent experience creating and running a small trucking business. Currently enrolled in Udacity Front End Web Developmer Nanodegree program. Always looking to learn, grow, and develop my skill set.",
 	"skills" : ["Project Management", "Team Building", "Microsoft Office", "Windows", "Unix/Linux", "Pumping it Up", "Keeping it Real", "C/C++", "Fortran", "Matlab/Simulink", "Autocad"],
-	"bioPic" : "images/ProfilePic.jpg"
+	"bioPic" : "images/ProfilePic-300_40pct.jpg"
 }
 
 bio.display = function (){
@@ -76,7 +76,7 @@ var work = {
 	]
 }
 
-function displaywork (){
+workExperience.display = function (){
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
@@ -92,8 +92,7 @@ function displaywork (){
 		$(".work-entry:last").append(formattedDescription);
 	}
 }
-displaywork();
-
+workExperience.display();
 
 var education = {
 	"schools" : [ 
