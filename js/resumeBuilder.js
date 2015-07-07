@@ -254,20 +254,26 @@ $("#mapDiv").append(googleMap);
     .style("background-color", "gray")
     .duration(750);
 */
-// Hamburger Menu Stuff
+
+
+/* Hamburger Menu design from:
+Hamburger Menu - HTML, CSS & jQuery
+By Glenn Smith, http://codepen.io/g13nn/pen/eHGEF
+*/
+
 $( ".cross" ).hide();
 $( ".menu" ).hide();
 $( ".hamburger" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".hamburger" ).hide();
-$( ".cross" ).show();
-});
+	$( ".menu" ).slideToggle( "slow", function() {
+		$( ".hamburger" ).hide();
+		$( ".cross" ).show();
+	});
 });
 
 $( ".cross" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hamburger" ).show();
-});
+	$( ".menu" ).slideToggle( "slow", function() {
+		$( ".cross" ).hide();
+		$( ".hamburger" ).show();
+	});
 });
 
