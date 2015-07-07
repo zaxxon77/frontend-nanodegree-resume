@@ -12,7 +12,7 @@ var bio = {
 	"welcomeMessage" : "Thirteen years of Mechanical, Aeronautical, Aerospace, and Systems Engineering experience with a strong background spanning leadership and program planning, missile system navigation, guidance, and control (NG&C) design and analysis, flight software development, physics-based model and simulation development, real time hardware-in-the-loop testing (HWIL), and system/subsystem/product requirements development, verification, and validation. Experience with total product lifecycle from design to deployment. Consistent top performer, and Subject Matter Expert in boost-phase missile stability. Recent experience creating and running a small trucking business. Currently enrolled in Udacity Front End Web Developmer Nanodegree program. Always looking to learn, grow, and develop my skill set.",
 	"skills" : ["Project Management", "Team Building", "Microsoft Office", "Windows", "Unix/Linux", "Pumping it Up", "Keeping it Real", "C/C++", "Fortran", "Matlab/Simulink", "Autocad"],
 	"bioPic" : "images/ProfilePic-300_40pct.jpg"
-}
+};
 
 bio.display = function (){
 	$("#header").prepend(HTMLheaderRole.replace("%data%",bio.role));
@@ -30,11 +30,11 @@ bio.display = function (){
 
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
-		for (skill in bio.skills) {
+		for (var skill in bio.skills) {
 			$("#skills").append(HTMLskills.replace("%data%",bio.skills[skill]));
 		}
 	}
-}
+};
 bio.display();
 
 footerContacts.display = function () {
@@ -44,7 +44,7 @@ footerContacts.display = function () {
 	$("#footerContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
 	//$("#header").append(HTMLblog.replace("%data%",bio.contacts.blog));
 	$("#footerContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
-}	
+};
 footerContacts.display();
 
 var work = {
@@ -74,10 +74,10 @@ var work = {
 		"url": "http://www.lockheedmartin.com/us/products/thaad.html"
 	}
 	]
-}
+};
 
 workExperience.display = function (){
-	for (job in work.jobs) {
+	for (var job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 		var formattedEmployerURL = formattedEmployer.replace("#",work.jobs[job].url);
@@ -91,7 +91,7 @@ workExperience.display = function (){
 		var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
-}
+};
 workExperience.display();
 
 var education = {
@@ -153,10 +153,10 @@ var education = {
 		"url": "https://www.udacity.com/course/intro-to-jquery--ud245"
 	}
 	]
-}
+};
 
 education.display = function (){
-	for (school in education.schools) {
+	for (var school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
 		var formattedName = HTMLschoolName.replace("%data%",education.schools[school].name);
@@ -177,15 +177,15 @@ education.display = function (){
 
 	}
 	$(".education-entry:last").append(HTMLonlineClasses);
-	for (course in education.onlineCourses) {
+	for (var course in education.onlineCourses) {
 		var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
-		var formattedTitleAndURL = formattedTitle.replace("#",education.onlineCourses[course].url)
+		var formattedTitleAndURL = formattedTitle.replace("#",education.onlineCourses[course].url);
 		$(".education-entry:last").append(formattedTitleAndURL);
 		$(".education-entry:last").append(HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school));
 		$(".education-entry:last").append(HTMLonlineDates.replace("%data%",education.onlineCourses[course].date));
 		//$(".education-entry:last").append(HTMLonlineURL.replace("%data%",education.onlineCourses[course].url));
 	}	
-}
+};
 education.display();
 
 
@@ -206,9 +206,9 @@ var projects = {
 		"url": "https://github.com/zaxxon77/frontend-nanodegree-resume"
 	}
 	]
-}
+};
 projects.display = function (){
-	for (project in projects.projects) {
+	for (var project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedProjectTitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
@@ -224,24 +224,8 @@ projects.display = function (){
 		var formattedProjectImage = HTMLprojectImage.replace("%data%",projects.projects[project].images);
 		$(".project-entry:last").append(formattedProjectImage);
 	}
-}
+};
 projects.display();
-
-
-function inName (name) {
-    var finalName = name;
-    var space_index = finalName.indexOf(" ");
-    var first_let = finalName[0].toUpperCase();
-    var first_name = finalName.slice(1, space_index);
-    first_name = first_let+first_name.toLowerCase();
-    var last_name = finalName.slice(space_index+1,finalName.length).toUpperCase();
-    finalName = first_name + " " + last_name;
-    return finalName;
-}
-//console.log(inName(name));
-
-
-//$("#main").append(internationalizeButton);
 
 
 // Lets see a map!
